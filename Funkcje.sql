@@ -1,5 +1,7 @@
 
---walidacja numeru pesel
+--walidacja 
+--numeru 
+--pesel
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION dbo.uf_IsPeselOK(
@@ -43,7 +45,7 @@ RETURN 1
 END
 GO 
 
---wyszukiwanie goœci po imieniu lub nazwisku
+--wyszukiwanie goÅ“ci po imieniu lub nazwisku
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION uf_SearchGuestByNameOrLastName(@NameOrSurname varchar(60))
@@ -76,7 +78,7 @@ BEGIN
 RETURN @is_free
 END
 
---liczba rezerwacji dla goœcia o danym imieniu/nazwisku
+--liczba rezerwacji dla goÅ“cia o danym imieniu/nazwisku
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION uf_NumberOfGuestReservations
@@ -108,7 +110,7 @@ RETURN @price
 END
 GO
 
---numer goœcia na podstawie numeru faktury
+--numer goÅ“cia na podstawie numeru faktury
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION uf_getGuestId(@id_billing int)
@@ -149,7 +151,7 @@ DECLARE @CheckInDate date
 END
 GO
 
---obliczanie d³ugoœci pobytu w dniach
+--obliczanie dÂ³ugoÅ“ci pobytu w dniach
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION uf_LengthOfTheVisit(@id_Reservation int)
@@ -193,7 +195,7 @@ RETURN @isRoomReserved
 END
 GO
 
---obliczanie ³¹cznej kwoty faktury
+--obliczanie Â³Â¹cznej kwoty faktury
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION uf_SumOfBilling(@id_transaction int)
