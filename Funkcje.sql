@@ -1,4 +1,3 @@
-
 use HotelDatabase
 go
 CREATE OR ALTER FUNCTION dbo.uf_IsPeselOK(
