@@ -1,5 +1,3 @@
-
---blokowanie wprowadzenia daty wymeldowania przed dat¹ zameldowania oraz wprowadzenia rezerwacji z dat¹ wczeœniejsz¹ ni¿ data dzisiejsza
 use HotelDatabase
 go
 CREATE or ALTER TRIGGER trg_ReservationDateBlock ON hotel.tbl_reservations
